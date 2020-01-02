@@ -35,12 +35,11 @@ public class PatientManagementSystem extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextPrescription = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
@@ -74,7 +73,7 @@ public class PatientManagementSystem extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        jTextNotes = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -113,11 +112,11 @@ public class PatientManagementSystem extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setColumns(20);
-        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jTextPrescription.setBackground(new java.awt.Color(255, 255, 255));
+        jTextPrescription.setColumns(20);
+        jTextPrescription.setForeground(new java.awt.Color(0, 0, 0));
+        jTextPrescription.setRows(5);
+        jScrollPane1.setViewportView(jTextPrescription);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -162,18 +161,11 @@ public class PatientManagementSystem extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        jButton1.setText("Create");
+        jButton1.setText("Save");
         jButton1.setToolTipText("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Delete");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
             }
         });
 
@@ -191,6 +183,11 @@ public class PatientManagementSystem extends javax.swing.JFrame {
         jButton4.setText("Patient");
 
         jButton5.setText("Clear");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("Login");
 
@@ -214,7 +211,6 @@ public class PatientManagementSystem extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
@@ -224,19 +220,20 @@ public class PatientManagementSystem extends javax.swing.JFrame {
                                 .addComponent(jButton7))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(25, 25, 25)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel15)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jButton5)
-                                        .addComponent(jButton4))))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(jButtonPrescribe)))
-                        .addGap(0, 4, Short.MAX_VALUE)))
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(0, 4, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jButtonPrescribe)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,17 +241,15 @@ public class PatientManagementSystem extends javax.swing.JFrame {
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
                 .addGap(18, 18, 18)
                 .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(50, 50, 50)
                 .addComponent(jButton4)
-                .addGap(12, 12, 12)
+                .addGap(29, 29, 29)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addComponent(jButtonPrescribe)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton6)
                     .addComponent(jButton7))
@@ -397,7 +392,7 @@ public class PatientManagementSystem extends javax.swing.JFrame {
         jComboBoxDoctorID.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxDoctorID.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jComboBoxDoctorID.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBoxDoctorID.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select ID", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxDoctorID.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select ID", "D9911", "D9922", "D9933" }));
         jComboBoxDoctorID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxDoctorIDActionPerformed(evt);
@@ -449,10 +444,10 @@ public class PatientManagementSystem extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 670, 1360, 180));
 
-        jTextArea2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane3.setViewportView(jTextArea2);
+        jTextNotes.setBackground(new java.awt.Color(255, 255, 255));
+        jTextNotes.setColumns(20);
+        jTextNotes.setRows(5);
+        jScrollPane3.setViewportView(jTextNotes);
 
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 410, 350, 160));
 
@@ -606,10 +601,6 @@ public class PatientManagementSystem extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextDosageActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -626,16 +617,166 @@ public class PatientManagementSystem extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void jComboBoxDoctorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxDoctorIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxDoctorIDActionPerformed
-
     private void jButtonPrescribeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPrescribeActionPerformed
        
-        String Quantity1 = 
+        String Quantity1 = (jTextPatientName.getText());
+        String Quantity2 = (jTextPatientAddress.getText());
+        String Quantity3 = (jTextSex.getText());
+        String Quantity4 = (jTextAge.getText());
+        String Quantity5 = (jTextDosage.getText());
+        String Quantity6 = (jTextQuantity.getText());
+        String Quantity7 = (jTextReccomendedDose.getText());
+        String Quantity8 = (jTextDoctorName.getText());
+        String Quantity9 = (jTextDoctorAddress.getText());
+        String Quantity10 = (jTextNotes.getText());
+        String Quantity11 = "";
+        
+        
+        
+        
+        
+        if (jComboBoxMedicationName.getSelectedItem().equals("Aspirin"))
+        {
+            
+            Quantity11 = "Aspirin";
+        }
+        
+        else if (jComboBoxMedicationName.getSelectedItem().equals("Paracetamol"))
+        {
+            
+            Quantity11 = "Paracetamol";
+            
+        }
+        
+        else if (jComboBoxMedicationName.getSelectedItem().equals("Co-codamal"))
+        {
+            
+            Quantity11 = "Co-codamal";
+            
+        }
+        
+        else if (jComboBoxMedicationName.getSelectedItem().equals("Rampril"))
+        {
+            
+            Quantity11 = "Rampril";
+            
+        }
+        else if (jComboBoxMedicationName.getSelectedItem().equals("Mega Paracetamol"))
+        {
+            
+            Quantity11 = "Mega Paracetamol";
+            
+        }
+        else if (jComboBoxMedicationName.getSelectedItem().equals("Caffiene"))
+        {
+            
+            Quantity11 = "Caffiene";
+            
+        }
+        else if (jComboBoxMedicationName.getSelectedItem().equals("Burn Cream"))
+        {
+            
+            Quantity11 = "Burn Cream";
+            
+        }
+        else if (jComboBoxMedicationName.getSelectedItem().equals("ibuprofen"))
+        {
+            
+            Quantity11 = "ibuprofen";
+            
+        }
+        else if (jComboBoxMedicationName.getSelectedItem().equals("Zopiclone"))
+        {
+            
+            Quantity11 = "Zopiclone";
+            
+        }
+        else if (jComboBoxMedicationName.getSelectedItem().equals("Loratadine"))
+        {
+            
+            Quantity11 = "Loratadine";
+            
+        }
+        
+        
+        jTextPrescription.setText("");
+        jTextPrescription.append("\t\n\tPrescription Details\n"
+                +"\nPatient Name:\t\t" + Quantity1
+                +"\nPatient Address:\t" + Quantity2
+                +"\nPatient Sex:\t\t" + Quantity3
+                +"\nPatient Age:\t\t" + Quantity4
+                +"\n\nMedication:\t\t" + Quantity11
+                +"\nDosage:\t\t" + Quantity5
+                +"\nQuantity:\t\t" + Quantity6
+                +"\nReccomendedDose:\t" + Quantity7
+                +"\n\nDoctors Name:\t\t" + Quantity8
+                +"\nDoctors Address:\t" + Quantity9
+                +"\n\n\tDoctors Notes\n\t" + Quantity10
+          
+        );
+  
+        
         
         
     }//GEN-LAST:event_jButtonPrescribeActionPerformed
+
+    private void jComboBoxDoctorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxDoctorIDActionPerformed
+      if (jComboBoxDoctorID.getSelectedItem().equals("D9911")) 
+       {
+           jTextDoctorName.setText("Dr Mark Ruffalo");
+           jTextDoctorAddress.setText("123 Good Clinic");
+           
+           
+           
+       }
+       
+       else if (jComboBoxDoctorID.getSelectedItem().equals("D9922"))
+           
+       {
+           jTextDoctorName.setText("Dr Stephen Strange");
+           jTextDoctorAddress.setText("123 Good Clinic");
+           
+           
+       }
+      
+        else if (jComboBoxDoctorID.getSelectedItem().equals("D9933"))
+           
+       {
+           jTextDoctorName.setText("Dr Walter White");
+           jTextDoctorAddress.setText("123 Good Clinic");
+           
+           
+       }
+      
+      else if (jComboBoxDoctorID.getSelectedItem().equals("Select ID"))
+           
+       {
+           jTextDoctorName.setText("");
+           jTextDoctorAddress.setText("");
+           
+           
+       }
+    }//GEN-LAST:event_jComboBoxDoctorIDActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+       jTextQuantity.setText("");
+       jTextDosage.setText("");
+       jTextReccomendedDose.setText("");
+       jTextPatientAddress.setText("");
+       jTextSex.setText("");
+       jTextAge.setText("");
+       jTextDoctorName.setText("");
+       jTextDoctorAddress.setText("");
+       jTextNotes.setText("");
+       jTextPatientName.setText("");
+       jTextPrescription.setText("");
+       jComboBoxMedicationName.getModel().setSelectedItem("Select Medication");
+       jComboBoxDoctorID.getModel().setSelectedItem("Doctor ID");
+       
+       
+  
+       
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -674,7 +815,6 @@ public class PatientManagementSystem extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -707,13 +847,13 @@ public class PatientManagementSystem extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextAge;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextDoctorAddress;
     private javax.swing.JTextField jTextDoctorName;
     private javax.swing.JTextField jTextDosage;
+    private javax.swing.JTextArea jTextNotes;
     private javax.swing.JTextField jTextPatientAddress;
     private javax.swing.JTextField jTextPatientName;
+    private javax.swing.JTextArea jTextPrescription;
     private javax.swing.JTextField jTextQuantity;
     private javax.swing.JTextField jTextReccomendedDose;
     private javax.swing.JTextField jTextSex;
