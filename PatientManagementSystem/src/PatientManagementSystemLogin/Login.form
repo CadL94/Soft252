@@ -286,5 +286,26 @@
         </Component>
       </SubComponents>
     </Container>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="10" y="140" width="230" height="470"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea1">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="* Logins For coursework purposes&#xa;&#xa;Doctor Username : D9911&#xa;Doctor Password :  Password1&#xa;&#xa;Doctor Username : D9922&#xa;Doctor Password : Password2&#xa;&#xa;Doctor Username : D9933&#xa;Doctor Password :  Password3&#xa;-------------------------------------------------&#xa;Patient Username : P2266&#xa;Patient Password :  Userpass1&#xa;&#xa;Patient Username : P2277&#xa;Patient Password :  Userpass2&#xa;&#xa;Patient Username : P2288&#xa;Patient Password :  Userpass3&#xa;--------------------------------------------------&#xa;&#xa;Secretary Username : S3311&#xa;Secretary Password : Secpass1&#xa;--------------------------------------------------&#xa;&#xa;Admin Username : A1111&#xa;Admin Password : Adminpassword&#xa;&#xa;"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>

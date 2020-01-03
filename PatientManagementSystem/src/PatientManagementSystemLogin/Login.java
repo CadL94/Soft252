@@ -6,6 +6,7 @@
 package PatientManagementSystemLogin;
 
 import PatientManagementSystemDoctor.PatientManagementSystem;
+import PatientManagementSystemPatient.Patient;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import jdk.nashorn.internal.parser.TokenType;
@@ -47,6 +48,8 @@ public class Login extends javax.swing.JFrame {
         jButtonLog = new javax.swing.JButton();
         jButtonLogClear = new javax.swing.JButton();
         jButtonLogExit = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
@@ -193,6 +196,13 @@ public class Login extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 790, 470));
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("* Logins For coursework purposes\n\nDoctor Username : D9911\nDoctor Password :  Password1\n\nDoctor Username : D9922\nDoctor Password : Password2\n\nDoctor Username : D9933\nDoctor Password :  Password3\n-------------------------------------------------\nPatient Username : P2266\nPatient Password :  Userpass1\n\nPatient Username : P2277\nPatient Password :  Userpass2\n\nPatient Username : P2288\nPatient Password :  Userpass3\n--------------------------------------------------\n\nSecretary Username : S3311\nSecretary Password : Secpass1\n--------------------------------------------------\n\nAdmin Username : A1111\nAdmin Password : Adminpassword\n\n");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 230, 470));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -233,8 +243,8 @@ public class Login extends javax.swing.JFrame {
             {
                 
             this.setVisible(false);
-            PatientManagementSystem SystemDoctor2 = new PatientManagementSystem();
-            SystemDoctor2.setVisible(true);
+            PatientManagementSystem SystemDoctor1 = new PatientManagementSystem();
+            SystemDoctor1.setVisible(true);
                 
             }
               else if (!(User.contains("D9922")) && (Password.contains("Password2")))
@@ -251,8 +261,8 @@ public class Login extends javax.swing.JFrame {
             {
                 
             this.setVisible(false);
-            PatientManagementSystem SystemDoctor3 = new PatientManagementSystem();
-            SystemDoctor3.setVisible(true);
+            PatientManagementSystem SystemDoctor1 = new PatientManagementSystem();
+            SystemDoctor1.setVisible(true);
                 
             }
               else if (!(User.contains("D9933")) && (Password.contains("Password3")))
@@ -263,12 +273,68 @@ public class Login extends javax.swing.JFrame {
             
         }
        
+         
+          else
+            {
+            if(User.contains("P2266") && (Password.contains("Userpass1"))) 
+            {
+                
+            this.setVisible(false);
+            Patient Patient1 = new Patient();
+            Patient1.setVisible(true);
+                
+            }
+              else if (!(User.contains("P2266")) && (Password.contains("Userpass1")))
+                
+        {
+            jTextUser.setText("");
+            jPassword.setText(""); 
+            
+        }
+              
+            else
+            {
+            if(User.contains("P2277") && (Password.contains("Userpass2"))) 
+            {
+                
+            this.setVisible(false);
+            Patient Patient1 = new Patient();
+            Patient1.setVisible(true);
+                
+            }
+              else if (!(User.contains("P2277")) && (Password.contains("Userpass2")))
+                
+        {
+            jTextUser.setText("");
+            jPassword.setText(""); 
+            
+        }
+             else
+            {
+            if(User.contains("P2288") && (Password.contains("Userpass3"))) 
+            {
+                
+            this.setVisible(false);
+            Patient Patient1 = new Patient();
+            Patient1.setVisible(true);
+                
+            }
+              else if (!(User.contains("P2288")) && (Password.contains("Userpass3")))
+                
+        {
+            jTextUser.setText("");
+            jPassword.setText(""); 
+            
         }
         
-        
+              }
+              }
+             }
             }
+           }
+            
         
-       
+            
     }//GEN-LAST:event_jButtonLogActionPerformed
 
     private void jButtonLogClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogClearActionPerformed
@@ -323,6 +389,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPassword;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextUser;
     // End of variables declaration//GEN-END:variables
 }
