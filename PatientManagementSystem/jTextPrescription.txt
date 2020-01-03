@@ -1,0 +1,19 @@
+	
+	Prescription Details
+
+Patient ID:		P2266
+Patient Name:		Lee Cadman
+Patient Address:	222 Crescent Plymouth
+Patient Sex:		Male
+Patient Age:		26
+
+Medication:		Paracetamol
+Dosage:		600
+Quantity:		42
+ReccomendedDose:	1 tablet twice a day
+
+Doctors Name:		Dr Mark Ruffalo
+Doctors Address:	123 Good Clinic
+
+	Doctors Notes
+	Patient has a bad headache. Paracetamol Prescribed
