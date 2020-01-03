@@ -5,7 +5,8 @@
  */
 package PatientManagementSystemLogin;
 
-import PatientManagementSystemDoctor.PatientManagementSystem;
+import PatientManagementSystemAdmin.Admin;
+import PatientManagementSystemDoctor.Doctor;
 import PatientManagementSystemPatient.Patient;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -95,7 +96,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("User :");
+        jLabel1.setText("Username :");
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
@@ -144,24 +145,24 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(54, 54, 54)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextUser, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                    .addGap(27, 27, 27)
-                                    .addComponent(jButtonLog)
-                                    .addGap(29, 29, 29)
-                                    .addComponent(jButtonLogClear)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButtonLogExit))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel5)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(790, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(jButtonLog)
+                                .addGap(29, 29, 29)
+                                .addComponent(jButtonLogClear)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonLogExit))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextUser, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(781, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(351, 351, 351)
@@ -174,9 +175,9 @@ public class Login extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(jLabel3)
                 .addGap(118, 118, 118)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addGap(62, 62, 62)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -194,11 +195,11 @@ public class Login extends javax.swing.JFrame {
                     .addContainerGap(387, Short.MAX_VALUE)))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 790, 470));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 790, 470));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("* Logins For coursework purposes\n\nDoctor Username : D9911\nDoctor Password :  Password1\n\nDoctor Username : D9922\nDoctor Password : Password2\n\nDoctor Username : D9933\nDoctor Password :  Password3\n-------------------------------------------------\nPatient Username : P2266\nPatient Password :  Userpass1\n\nPatient Username : P2277\nPatient Password :  Userpass2\n\nPatient Username : P2288\nPatient Password :  Userpass3\n--------------------------------------------------\n\nSecretary Username : S3311\nSecretary Password : Secpass1\n--------------------------------------------------\n\nAdmin Username : A1111\nAdmin Password : Adminpassword\n\n");
+        jTextArea1.setText("* Login details For coursework purposes\n\nDoctor Username : D9911\nDoctor Password : Password1\n\n-------------------------------------------------\n\nPatient Username : P2266\nPatient Password :  Userpass1\n\n-------------------------------------------------\n\nSecretary Username : S3311\nSecretary Password : Secpass1\n\n--------------------------------------------------\n\nAdmin Username : A1111\nAdmin Password : Adminpassword\n\n");
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 230, 470));
@@ -224,7 +225,7 @@ public class Login extends javax.swing.JFrame {
         {
             
             this.setVisible(false);
-            PatientManagementSystem SystemDoctor1 = new PatientManagementSystem();
+            Doctor SystemDoctor1 = new Doctor();
             SystemDoctor1.setVisible(true);
          
         }
@@ -243,7 +244,7 @@ public class Login extends javax.swing.JFrame {
             {
                 
             this.setVisible(false);
-            PatientManagementSystem SystemDoctor1 = new PatientManagementSystem();
+            Doctor SystemDoctor1 = new Doctor();
             SystemDoctor1.setVisible(true);
                 
             }
@@ -261,7 +262,7 @@ public class Login extends javax.swing.JFrame {
             {
                 
             this.setVisible(false);
-            PatientManagementSystem SystemDoctor1 = new PatientManagementSystem();
+            Doctor SystemDoctor1 = new Doctor();
             SystemDoctor1.setVisible(true);
                 
             }
@@ -326,14 +327,50 @@ public class Login extends javax.swing.JFrame {
             jPassword.setText(""); 
             
         }
+            
+            else
+            {
+            if(User.contains("A1111") && (Password.contains("Adminpassword"))) 
+            {
+                
+            this.setVisible(false);
+            Admin Admin1 = new Admin();
+            Admin1.setVisible(true);
+                
+            }
+              else if (!(User.contains("A1111")) && (Password.contains("Adminpassword")))
+                
+        {
+            jTextUser.setText("");
+            jPassword.setText(""); 
+            
+        }
+            
+             else
+            {
+            if(User.contains("S3311") && (Password.contains("Secpass1"))) 
+            {
+                
+            this.setVisible(false);
+            Admin Admin1 = new Admin();
+            Admin1.setVisible(true);
+                
+            }
+              else if (!(User.contains("S3311")) && (Password.contains("Secpass1")))
+                
+        {
+            jTextUser.setText("");
+            jPassword.setText(""); 
+            
+        }
         
               }
               }
              }
             }
            }
-            
-        
+            }
+            }
             
     }//GEN-LAST:event_jButtonLogActionPerformed
 
