@@ -16,4 +16,4 @@ Doctors Name:		Dr Mark Ruffalo
 Doctors Address:	123 Good Clinic
 
 	Doctors Notes
-	Patient has a bad headache. Paracetamol Prescribed
+	Patient has a headache. 
