@@ -301,7 +301,7 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="* Login details For coursework purposes&#xa;&#xa;Doctor Username : D9911&#xa;Doctor Password : Password1&#xa;&#xa;-------------------------------------------------&#xa;&#xa;Patient Username : P2266&#xa;Patient Password :  Userpass1&#xa;&#xa;-------------------------------------------------&#xa;&#xa;Secretary Username : S3311&#xa;Secretary Password : Secpass1&#xa;&#xa;--------------------------------------------------&#xa;&#xa;Admin Username : A1111&#xa;Admin Password : Adminpassword&#xa;&#xa;"/>
+            <Property name="text" type="java.lang.String" value="* Login details For coursework purposes&#xa;&#xa;Doctor Username : D9911&#xa;Doctor Password : Password1&#xa;&#xa;Doctor Name &quot;Dr Mark Ruffalo&quot;&#xa;-------------------------------------------------&#xa;&#xa;Patient Username : P2266&#xa;Patient Password :  Userpass1&#xa;&#xa;Patient Name &quot;Lee Cadman&quot;&#xa;-------------------------------------------------&#xa;&#xa;Secretary Username : S3311&#xa;Secretary Password : Secpass1&#xa;&#xa;--------------------------------------------------&#xa;&#xa;Admin Username : A1111&#xa;Admin Password : Adminpassword&#xa;&#xa;"/>
           </Properties>
         </Component>
       </SubComponents>

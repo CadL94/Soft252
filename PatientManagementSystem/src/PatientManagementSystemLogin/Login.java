@@ -8,9 +8,10 @@ package PatientManagementSystemLogin;
 import PatientManagementSystemAdmin.Admin;
 import PatientManagementSystemDoctor.Doctor;
 import PatientManagementSystemPatient.Patient;
+import PatientManagementSystemSecretary.Secretary;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import jdk.nashorn.internal.parser.TokenType;
+
 
 /**
  *
@@ -199,7 +200,7 @@ public class Login extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("* Login details For coursework purposes\n\nDoctor Username : D9911\nDoctor Password : Password1\n\n-------------------------------------------------\n\nPatient Username : P2266\nPatient Password :  Userpass1\n\n-------------------------------------------------\n\nSecretary Username : S3311\nSecretary Password : Secpass1\n\n--------------------------------------------------\n\nAdmin Username : A1111\nAdmin Password : Adminpassword\n\n");
+        jTextArea1.setText("* Login details For coursework purposes\n\nDoctor Username : D9911\nDoctor Password : Password1\n\nDoctor Name \"Dr Mark Ruffalo\"\n-------------------------------------------------\n\nPatient Username : P2266\nPatient Password :  Userpass1\n\nPatient Name \"Lee Cadman\"\n-------------------------------------------------\n\nSecretary Username : S3311\nSecretary Password : Secpass1\n\n--------------------------------------------------\n\nAdmin Username : A1111\nAdmin Password : Adminpassword\n\n");
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 230, 470));
@@ -208,6 +209,9 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonLogExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogExitActionPerformed
+       
+        /*** Exit button. Quits Application ***/
+        
         frame =new JFrame();
         if (JOptionPane.showConfirmDialog(frame,"Do you want to exit?", "Patient Management System",
               JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
@@ -216,6 +220,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonLogExitActionPerformed
 
     private void jButtonLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogActionPerformed
+        
+        /*** Log in button. Username and password have to equal set username and password to log in. Interface that loads is set to appropriate user ***/
         
         String User = jTextUser.getText();
         String Password = jPassword.getText();
@@ -352,8 +358,8 @@ public class Login extends javax.swing.JFrame {
             {
                 
             this.setVisible(false);
-            Admin Admin1 = new Admin();
-            Admin1.setVisible(true);
+            Secretary Sec1 = new Secretary();
+            Sec1.setVisible(true);
                 
             }
               else if (!(User.contains("S3311")) && (Password.contains("Secpass1")))
@@ -375,6 +381,10 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonLogActionPerformed
 
     private void jButtonLogClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogClearActionPerformed
+        
+        /*** Sets text fields blank ***/
+        
+        
         jTextUser.setText("");
         jPassword.setText(""); 
     }//GEN-LAST:event_jButtonLogClearActionPerformed
