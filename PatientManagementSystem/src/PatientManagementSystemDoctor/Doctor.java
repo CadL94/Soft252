@@ -6,7 +6,6 @@
 package PatientManagementSystemDoctor;
 
 import PatientManagementSystemLogin.Login;
-import PatientManagementSystemPatient.Patient;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -42,7 +41,6 @@ public class Doctor extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPrescription = new javax.swing.JTextArea();
-        jButtonWrite = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
@@ -123,21 +121,12 @@ public class Doctor extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
+        jTextPrescription.setEditable(false);
         jTextPrescription.setBackground(new java.awt.Color(255, 255, 255));
         jTextPrescription.setColumns(20);
         jTextPrescription.setForeground(new java.awt.Color(0, 0, 0));
         jTextPrescription.setRows(5);
         jScrollPane1.setViewportView(jTextPrescription);
-
-        jButtonWrite.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jButtonWrite.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonWrite.setText("Save prescription to text file");
-        jButtonWrite.setToolTipText("");
-        jButtonWrite.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonWriteActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -145,19 +134,11 @@ public class Doctor extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButtonWrite, javax.swing.GroupLayout.DEFAULT_SIZE, 452, Short.MAX_VALUE)
-                        .addContainerGap())))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonWrite, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 120, 470, 630));
@@ -292,6 +273,7 @@ public class Doctor extends javax.swing.JFrame {
         jLabel12.setText("Sex :");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 370, -1, 30));
 
+        jTextSex.setEditable(false);
         jTextSex.setBackground(new java.awt.Color(255, 255, 255));
         jTextSex.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextSex.setForeground(new java.awt.Color(0, 0, 0));
@@ -302,6 +284,7 @@ public class Doctor extends javax.swing.JFrame {
         });
         getContentPane().add(jTextSex, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 370, 100, -1));
 
+        jTextDoctorName.setEditable(false);
         jTextDoctorName.setBackground(new java.awt.Color(255, 255, 255));
         jTextDoctorName.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextDoctorName.setForeground(new java.awt.Color(0, 0, 0));
@@ -312,6 +295,7 @@ public class Doctor extends javax.swing.JFrame {
         });
         getContentPane().add(jTextDoctorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 200, -1));
 
+        jTextDoctorAddress.setEditable(false);
         jTextDoctorAddress.setBackground(new java.awt.Color(255, 255, 255));
         jTextDoctorAddress.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextDoctorAddress.setForeground(new java.awt.Color(0, 0, 0));
@@ -322,6 +306,7 @@ public class Doctor extends javax.swing.JFrame {
         });
         getContentPane().add(jTextDoctorAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 200, -1));
 
+        jTextQuantity.setEditable(false);
         jTextQuantity.setBackground(new java.awt.Color(255, 255, 255));
         jTextQuantity.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextQuantity.setForeground(new java.awt.Color(0, 0, 0));
@@ -332,6 +317,7 @@ public class Doctor extends javax.swing.JFrame {
         });
         getContentPane().add(jTextQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 480, 80, -1));
 
+        jTextReccomendedDose.setEditable(false);
         jTextReccomendedDose.setBackground(new java.awt.Color(255, 255, 255));
         jTextReccomendedDose.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextReccomendedDose.setForeground(new java.awt.Color(0, 0, 0));
@@ -342,6 +328,7 @@ public class Doctor extends javax.swing.JFrame {
         });
         getContentPane().add(jTextReccomendedDose, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 520, 260, -1));
 
+        jTextPatientName.setEditable(false);
         jTextPatientName.setBackground(new java.awt.Color(255, 255, 255));
         jTextPatientName.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextPatientName.setForeground(new java.awt.Color(0, 0, 0));
@@ -352,6 +339,7 @@ public class Doctor extends javax.swing.JFrame {
         });
         getContentPane().add(jTextPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 270, 260, -1));
 
+        jTextPatientAddress.setEditable(false);
         jTextPatientAddress.setBackground(new java.awt.Color(255, 255, 255));
         jTextPatientAddress.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextPatientAddress.setForeground(new java.awt.Color(0, 0, 0));
@@ -373,6 +361,7 @@ public class Doctor extends javax.swing.JFrame {
         });
         getContentPane().add(jComboBoxDoctorID, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 150, -1));
 
+        jTextAge.setEditable(false);
         jTextAge.setBackground(new java.awt.Color(255, 255, 255));
         jTextAge.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextAge.setForeground(new java.awt.Color(0, 0, 0));
@@ -393,6 +382,7 @@ public class Doctor extends javax.swing.JFrame {
         jLabel14.setText("Dosage (mg) :");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 440, -1, 30));
 
+        jTextDosage.setEditable(false);
         jTextDosage.setBackground(new java.awt.Color(255, 255, 255));
         jTextDosage.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextDosage.setForeground(new java.awt.Color(0, 0, 0));
@@ -479,14 +469,14 @@ public class Doctor extends javax.swing.JFrame {
         getContentPane().add(jComboBoxPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 220, 190, -1));
 
         jButton1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jButton1.setText("Save");
+        jButton1.setText("Display");
         jButton1.setToolTipText("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 590, 110, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 590, 120, 50));
 
         jButton5.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jButton5.setText("Clear");
@@ -507,19 +497,22 @@ public class Doctor extends javax.swing.JFrame {
         getContentPane().add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 590, 110, -1));
 
         jButtonPrescribe.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jButtonPrescribe.setText("Prescribe");
+        jButtonPrescribe.setText("Prescribe & Save");
         jButtonPrescribe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPrescribeActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonPrescribe, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 560, 230, 60));
+        getContentPane().add(jButtonPrescribe, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 560, 330, 80));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBoxMedicationNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxMedicationNameActionPerformed
-       if (jComboBoxMedicationName.getSelectedItem().equals("Aspirin")) 
+       
+        /*** Sets text box fields when selecting certain items from drop down box. ***/
+        
+        if (jComboBoxMedicationName.getSelectedItem().equals("Aspirin")) 
        {
            jTextQuantity.setText("62");
            jTextDosage.setText("45");
@@ -658,6 +651,9 @@ public class Doctor extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextDosageActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      
+        /*** Gets text and displays to table ***/
+        
        DefaultTableModel DoctorModel = (DefaultTableModel) jTable1.getModel();
        DoctorModel.addRow(new Object[]{jComboBoxDoctorID.getSelectedItem().toString(),
            jTextDoctorName.getText(), jTextDoctorAddress.getText(), jComboBoxMedicationName.getSelectedItem().toString(),
@@ -666,6 +662,9 @@ public class Doctor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButtonCreateAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateAppointmentActionPerformed
+        
+        /*** Saves to text file ***/
+        
         DefaultTableModel AppointmentModel = (DefaultTableModel) jTable2.getModel();
        AppointmentModel.addRow(new Object[]{jTextFieldCreateAppointment.getText(),
            jTextPatientName.getText(), jComboBoxPatientID.getSelectedItem().toString()});
@@ -689,6 +688,9 @@ public class Doctor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCreateAppointmentActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        
+        /*** Exit button. Quits Application ***/
+        
         frame =new JFrame();
         if (JOptionPane.showConfirmDialog(frame,"Do you want to exit?", "Patient Management System",
               JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
@@ -698,6 +700,10 @@ public class Doctor extends javax.swing.JFrame {
 
     private void jButtonPrescribeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPrescribeActionPerformed
        
+       
+         /*** Gets text from stated text boxes ***/
+        
+        
         String Quantity1 = (jTextPatientName.getText());
         String Quantity2 = (jTextPatientAddress.getText());
         String Quantity3 = (jTextSex.getText());
@@ -713,7 +719,7 @@ public class Doctor extends javax.swing.JFrame {
         
         
         
-        
+        /*** Sets text box fields based on selected ***/
         
         
         
@@ -805,6 +811,7 @@ public class Doctor extends javax.swing.JFrame {
         }
         
         
+          /*** Prescription text area layout ***/
         
         jTextPrescription.setText("");
         jTextPrescription.append("\t\n\tPrescription Details\n"
@@ -824,12 +831,32 @@ public class Doctor extends javax.swing.JFrame {
         );
   
         
+         /*** Saves to text file ***/
+        
+        
+         try 
+            {
+                FileWriter writer = new FileWriter("jTextPrescription.txt");
+            try (BufferedWriter bw = new BufferedWriter( writer )) {
+                jTextPrescription.write(bw);
+                
+             
+            }
+                jTextPrescription.requestFocus();
+        }
+        catch(IOException e) {
+            JOptionPane.showMessageDialog(null, e);
+            
+        }
         
         
     }//GEN-LAST:event_jButtonPrescribeActionPerformed
 
     private void jComboBoxDoctorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxDoctorIDActionPerformed
-      if (jComboBoxDoctorID.getSelectedItem().equals("D9911")) 
+     
+         /*** Sets text box fields when selecting certain items from drop down box. ***/
+        
+        if (jComboBoxDoctorID.getSelectedItem().equals("D9911")) 
        {
            jTextDoctorName.setText("Dr Mark Ruffalo");
            jTextDoctorAddress.setText("123 Good Clinic");
@@ -867,7 +894,10 @@ public class Doctor extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBoxDoctorIDActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       jTextQuantity.setText("");
+      
+        /*** Default value for text boxes and drop down box  ***/
+        
+        jTextQuantity.setText("");
        jTextDosage.setText("");
        jTextReccomendedDose.setText("");
        jTextPatientAddress.setText("");
@@ -894,6 +924,9 @@ public class Doctor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonLoginActionPerformed
 
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
+        
+        /*** Allows deletion of rows of table ***/
+        
         DefaultTableModel DoctorModel = (DefaultTableModel) jTable1.getModel();
         if (jTable1.getSelectedRow()==-1){
             if (jTable1.getSelectedRowCount() ==0){
@@ -914,6 +947,9 @@ public class Doctor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonDeleteActionPerformed
 
     private void jComboBoxPatientIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxPatientIDActionPerformed
+       
+        /*** Sets text box values when selecting certain items from drop down box. ***/
+        
         if (jComboBoxPatientID.getSelectedItem().equals("P2266")) 
        {
            jTextPatientName.setText("Lee Cadman");
@@ -964,22 +1000,6 @@ public class Doctor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextAgeActionPerformed
 
-    private void jButtonWriteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonWriteActionPerformed
-        try 
-            {
-                FileWriter writer = new FileWriter("jTextPrescription.txt");
-            try (BufferedWriter bw = new BufferedWriter( writer )) {
-                jTextPrescription.write(bw);
-             
-            }
-                jTextPrescription.requestFocus();
-        }
-        catch(IOException e) {
-            JOptionPane.showMessageDialog(null, e);
-            
-        }
-    }//GEN-LAST:event_jButtonWriteActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -1024,7 +1044,6 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JButton jButtonDelete;
     private javax.swing.JButton jButtonLogin;
     private javax.swing.JButton jButtonPrescribe;
-    private javax.swing.JButton jButtonWrite;
     private javax.swing.JComboBox<String> jComboBoxDoctorID;
     private javax.swing.JComboBox<String> jComboBoxMedicationName;
     private javax.swing.JComboBox<String> jComboBoxPatientID;
