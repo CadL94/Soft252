@@ -6,12 +6,10 @@
 package PatientManagementSystemAdmin;
 
 import PatientManagementSystemPatient.*;
-import PatientManagementSystemDoctor.*;
 import PatientManagementSystemLogin.Login;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -184,6 +182,7 @@ public class Admin extends javax.swing.JFrame {
         jLabel9.setText("Doctor Feedback");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, -1, 30));
 
+        jTextDoctorName.setEditable(false);
         jTextDoctorName.setBackground(new java.awt.Color(255, 255, 255));
         jTextDoctorName.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextDoctorName.setForeground(new java.awt.Color(0, 0, 0));
@@ -257,6 +256,9 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextDoctorNameActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+       
+        /*** Exit button. Quits Application ***/
+        
         frame =new JFrame();
         if (JOptionPane.showConfirmDialog(frame,"Do you want to exit?", "Patient Management System",
               JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
@@ -265,7 +267,10 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jComboBoxDoctorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxDoctorIDActionPerformed
-      if (jComboBoxDoctorID.getSelectedItem().equals("D9911")) 
+     
+        /*** Sets text box fields when selecting certain items from drop down box. ***/
+        
+        if (jComboBoxDoctorID.getSelectedItem().equals("D9911")) 
        {
            jTextDoctorName.setText("Dr Mark Ruffalo");
            
@@ -309,6 +314,9 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonLoginActionPerformed
 
     private void jButtonvIewDocFeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonvIewDocFeedActionPerformed
+       
+        /*** Loads text file and displays text ***/
+        
         String filePath = "jTextPatientDocFeedback.txt";
     File file = new File(filePath);
     
@@ -336,12 +344,17 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonvIewDocFeedActionPerformed
 
     private void jButtonDocFeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDocFeedActionPerformed
-         try 
+         
+        /*** Saves to text file ***/
+        
+        try 
             {
                 FileWriter writer = new FileWriter("jTextDocGiveFeedback.txt");
             try (BufferedWriter bw = new BufferedWriter( writer )) {
                 
+                jTextDoctorName.write(bw);
                 jTextFeedbackNotes.write(bw);
+                
              
             }
                 jTextFeedbackNotes.requestFocus();
