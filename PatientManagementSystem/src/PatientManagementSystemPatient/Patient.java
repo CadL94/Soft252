@@ -5,12 +5,11 @@
  */
 package PatientManagementSystemPatient;
 
-import PatientManagementSystemDoctor.*;
+
 import PatientManagementSystemLogin.Login;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -83,6 +82,8 @@ public class Patient extends javax.swing.JFrame {
         jTextPatientdate = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jButtonReqApp = new javax.swing.JButton();
+        jComboBox10 = new javax.swing.JComboBox<>();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -218,12 +219,12 @@ public class Patient extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Enter Feedback :");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, -1, 30));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 470, -1, 30));
 
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("Doctor Name :");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, 30));
+        jLabel8.setText("Rating /10 :");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, -1, 30));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
@@ -235,6 +236,7 @@ public class Patient extends javax.swing.JFrame {
         jLabel10.setText("Request Appointment Date ");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 370, -1, 30));
 
+        jTextDoctorName.setEditable(false);
         jTextDoctorName.setBackground(new java.awt.Color(255, 255, 255));
         jTextDoctorName.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextDoctorName.setForeground(new java.awt.Color(0, 0, 0));
@@ -271,7 +273,7 @@ public class Patient extends javax.swing.JFrame {
         jTextFeedbackNotes.setRows(5);
         jScrollPane3.setViewportView(jTextFeedbackNotes);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, 320, 120));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 290, 110));
 
         jButtonFeedView.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jButtonFeedView.setText("Display Feedback");
@@ -280,7 +282,7 @@ public class Patient extends javax.swing.JFrame {
                 jButtonFeedViewActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonFeedView, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 530, 260, 60));
+        getContentPane().add(jButtonFeedView, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 550, 260, 60));
 
         jLabel17.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
@@ -295,7 +297,7 @@ public class Patient extends javax.swing.JFrame {
                 jButtonSaveFeedActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonSaveFeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 530, 240, 60));
+        getContentPane().add(jButtonSaveFeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 550, 240, 60));
 
         jButton5.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jButton5.setText("Clear");
@@ -304,7 +306,7 @@ public class Patient extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 110, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 110, -1));
 
         jButtonDelete.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jButtonDelete.setText("Delete");
@@ -351,13 +353,14 @@ public class Patient extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonImport, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 580, 450, 60));
 
+        jTextPrescription.setEditable(false);
         jTextPrescription.setBackground(new java.awt.Color(255, 255, 255));
         jTextPrescription.setColumns(20);
         jTextPrescription.setForeground(new java.awt.Color(0, 0, 0));
         jTextPrescription.setRows(5);
         jScrollPane1.setViewportView(jTextPrescription);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 600, 550, 230));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 610, 550, 230));
 
         jTable2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -425,6 +428,21 @@ public class Patient extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonReqApp, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 480, -1, -1));
 
+        jComboBox10.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox10.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Select Rating", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        jComboBox10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox10ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, 200, -1));
+
+        jLabel14.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setText("Doctor Name :");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, 30));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -439,16 +457,20 @@ public class Patient extends javax.swing.JFrame {
     private void jButtonSaveFeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveFeedActionPerformed
        DefaultTableModel DoctorModel = (DefaultTableModel) jTable1Feedback.getModel();
        DoctorModel.addRow(new Object[]{jComboBoxDoctorID.getSelectedItem().toString(),
-           jTextDoctorName.getText(),jTextPatientName.getText(),jTextPatientID3.getText(),jTextFeedbackNotes.getText(),});
+           jTextDoctorName.getText(),jTextPatientName.getText(),jTextPatientID1.getText(),jTextFeedbackNotes.getText(), jComboBox10.toString()});
        
+       
+       /*** Saves to text file ***/
        
          try 
             {
                 FileWriter writer = new FileWriter("jTextPatientDocFeedback.txt");
             try (BufferedWriter bw = new BufferedWriter( writer )) {
                 
-                jTextFeedbackNotes.write(bw);
+                
                 jTextDoctorName.write(bw);
+                jTextFeedbackNotes.write(bw);
+                
              
             }
                 jTextFeedbackNotes.requestFocus();
@@ -464,6 +486,9 @@ public class Patient extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonSaveFeedActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        
+        /*** Exit button. Quits Application ***/
+        
         frame =new JFrame();
         if (JOptionPane.showConfirmDialog(frame,"Do you want to exit?", "Patient Management System",
               JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
@@ -473,15 +498,19 @@ public class Patient extends javax.swing.JFrame {
 
     private void jButtonFeedViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFeedViewActionPerformed
        
+        /*** Gets text from stated text boxes ***/
+        
+        
         String Quantity19 = (jTextPatientID1.getText());
         String Quantity20 = (jTextPatientName.getText());
         String Quantity21 = (jTextDoctorName.getText());
         String Quantity22 = (jTextFeedbackNotes.getText());
         String Quantity23 = "";
+        String Quantity24 = "";
         
         
         
-        
+        /*** Sets text box fields based on selected ***/
        
         
          if (jComboBoxDoctorID.getSelectedItem().equals("D9911"))
@@ -504,12 +533,89 @@ public class Patient extends javax.swing.JFrame {
             
         }
         
+        /*** Sets text box fields based on selected ***/
         
+         if (jComboBox10.getSelectedItem().equals("1"))
+        {
+            
+            Quantity24 = "1";
+        }
         
+        else if (jComboBox10.getSelectedItem().equals("2"))
+        {
+            
+            Quantity24 = "2";
+            
+        }
+         
+          else if (jComboBox10.getSelectedItem().equals("3"))
+        {
+            
+            Quantity24 = "3";
+            
+        }
+         
+          
+        else if (jComboBox10.getSelectedItem().equals("4"))
+        {
+            
+            Quantity24 = "4";
+            
+        }
+         
+          else if (jComboBox10.getSelectedItem().equals("5"))
+        {
+            
+            Quantity24 = "5";
+            
+        }
+         
+          
+        else if (jComboBox10.getSelectedItem().equals("6"))
+        {
+            
+            Quantity24 = "6";
+            
+        }
+         
+          else if (jComboBox10.getSelectedItem().equals("7"))
+        {
+            
+            Quantity24 = "7";
+            
+        }
+         
+          else if (jComboBox10.getSelectedItem().equals("8"))
+        {
+            
+            Quantity24 = "8";
+            
+        }
+         
+          
+        else if (jComboBox10.getSelectedItem().equals("9"))
+        {
+            
+            Quantity24 = "9";
+            
+        }
+         
+          else if (jComboBox10.getSelectedItem().equals("10"))
+        {
+            
+            Quantity24 = "10";
+            
+        }
         
+         else if (jComboBox10.getSelectedItem().equals("Please Select Rating"))
+        {
+            
+            Quantity24 = "";
+            
+        }
         
        
-        
+        /*** Prescription text area layout ***/
         
         jTextPrescription.setText("");
         jTextPrescription.append("\t\n\tFeedback Details\n"
@@ -517,6 +623,7 @@ public class Patient extends javax.swing.JFrame {
                 +"\nPatient Name:\t\t" + Quantity20
                 +"\n\nDoctors ID:\t\t" + Quantity23
                 +"\n\nDoctors Name:\t\t" + Quantity21
+                +"\n\nRating:\t\t" + Quantity24
                 +"\n\n\tFeedback\n\t" + Quantity22
           
         );
@@ -527,7 +634,11 @@ public class Patient extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonFeedViewActionPerformed
 
     private void jComboBoxDoctorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxDoctorIDActionPerformed
-      if (jComboBoxDoctorID.getSelectedItem().equals("D9911")) 
+      
+        /*** Sets text box fields based on selected ***/
+        
+        
+        if (jComboBoxDoctorID.getSelectedItem().equals("D9911")) 
        {
            jTextDoctorName.setText("Dr Mark Ruffalo");
            
@@ -566,10 +677,12 @@ public class Patient extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-       jTextDoctorName.setText("");
+       /*** Sets text box fields blank when button is pressed ***/
+        
+        jTextDoctorName.setText("");
        jTextFeedbackNotes.setText("");
        jTextPatientName.setText("");
-       jTextPatientID3.setText("");
+       jTextPatientID1.setText("");
        jComboBoxDoctorID.getModel().setSelectedItem("Select ID");
       
        
@@ -585,6 +698,9 @@ public class Patient extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonLoginActionPerformed
 
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
+       
+        /*** Allows deletion of rows on table ***/
+        
         DefaultTableModel DoctorModel = (DefaultTableModel) jTable1Feedback.getModel();
         if (jTable1Feedback.getSelectedRow()==-1){
             if (jTable1Feedback.getSelectedRowCount() ==0){
@@ -610,6 +726,9 @@ public class Patient extends javax.swing.JFrame {
 
     private void jButtonImportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImportActionPerformed
     
+   
+        /*** Loads text file and displays text ***/
+        
     String filePath = "jTextPrescription.txt";
     File file = new File(filePath);
     
@@ -637,8 +756,11 @@ public class Patient extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonImportActionPerformed
 
     private void jButtonViewAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonViewAppointmentActionPerformed
-          String filePath = "jTextAppointment.txt";
-    File file = new File(filePath);
+          
+        /*** Loads text file and displays text ***/
+        
+        String filePath = "jTextAppointment.txt";
+        File file = new File(filePath);
     
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -671,7 +793,10 @@ public class Patient extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextPatientdateActionPerformed
 
     private void jButtonReqAppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReqAppActionPerformed
-         try 
+         
+        /*** Saves to text file ***/
+        
+        try 
             {
                 FileWriter writer = new FileWriter("jTextPatientReq.txt");
             try (BufferedWriter bw = new BufferedWriter( writer )) {
@@ -691,6 +816,19 @@ public class Patient extends javax.swing.JFrame {
        
        
     }//GEN-LAST:event_jButtonReqAppActionPerformed
+
+    private void jComboBox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox10ActionPerformed
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jComboBox10ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -738,12 +876,14 @@ public class Patient extends javax.swing.JFrame {
     private javax.swing.JButton jButtonReqApp;
     private javax.swing.JButton jButtonSaveFeed;
     private javax.swing.JButton jButtonViewAppointment;
+    private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBoxDoctorID;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
