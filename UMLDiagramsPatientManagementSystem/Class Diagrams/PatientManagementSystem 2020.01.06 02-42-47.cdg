@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PatientManagementSystem">
+  <ClassDiagramComponents>
+    <Class name="Admin" package="PatientManagementSystemAdmin" visibility="public" xPosition="63.0" yPosition="225.0">
+      <Fields>
+        <Field name="frame" type="JFrame" visibility="private"/>
+        <Field name="jButton7" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonDocFeed" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonvIewDocFeed" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBoxDoctorID" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane4" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTableDocFeed" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTextDoctorName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextFeedbackNotes" type="javax.swing.JTextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jTextDoctorNameActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton7ActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBoxDoctorIDActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonLoginActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonvIewDocFeedActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonDocFeedActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Doctor" package="PatientManagementSystemDoctor" visibility="public" xPosition="799.0" yPosition="225.0">
+      <Fields>
+        <Field name="frame" type="JFrame" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton5" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton7" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonCreateAppointment" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonDelete" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonPrescribe" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBoxDoctorID" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBoxMedicationName" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBoxPatientID" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane4" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTable2" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTextAge" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextDoctorAddress" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextDoctorName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextDosage" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextFieldCreateAppointment" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextNotes" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jTextPatientAddress" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextPatientName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextPrescription" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jTextQuantity" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextReccomendedDose" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextSex" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jComboBoxMedicationNameActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextDoctorNameActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextDoctorAddressActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextQuantityActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextReccomendedDoseActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextPatientNameActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextPatientAddressActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextDosageActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonCreateAppointmentActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton7ActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonPrescribeActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBoxDoctorIDActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton5ActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonLoginActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonDeleteActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBoxPatientIDActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextSexActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextAgeActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Login" package="PatientManagementSystemLogin" visibility="public" xPosition="1575.0" yPosition="225.0">
+      <Fields>
+        <Field name="frame" type="JFrame" visibility="private"/>
+        <Field name="jButtonLog" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonLogClear" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonLogExit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPassword" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTextArea1" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jTextUser" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButtonLogExitActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonLogActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonLogClearActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Patient" package="PatientManagementSystemPatient" visibility="public" xPosition="3195.0" yPosition="225.0">
+      <Fields>
+        <Field name="frame" type="JFrame" visibility="private"/>
+        <Field name="jButton5" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton7" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonDelete" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonFeedView" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonImport" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonReqApp" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonSaveFeed" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonViewAppointment" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox10" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBoxDoctorID" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane4" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane5" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTable1Feedback" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTable2" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTextDoctorName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextFeedbackNotes" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jTextPatientID1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextPatientID3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextPatientName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextPatientdate" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextPrescription" type="javax.swing.JTextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jTextDoctorNameActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextPatientNameActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonSaveFeedActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton7ActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonFeedViewActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBoxDoctorIDActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton5ActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonLoginActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonDeleteActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextPatientID3ActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonImportActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonViewAppointmentActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextPatientID1ActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextPatientdateActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonReqAppActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBox10ActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Secretary" package="PatientManagementSystemSecretary" visibility="public" xPosition="2394.0" yPosition="225.0">
+      <Fields>
+        <Field name="frame" type="JFrame" visibility="private"/>
+        <Field name="Paracetmol" type="int" visibility="package"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton7" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBoxSecretary" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane4" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTableSecAppoint" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTextStock" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton7ActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonLoginActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextStockActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBoxSecretaryActionPerformed" returnType="java.awt.event.ActionEvent" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JFrame" package="" visibility="public" xPosition="2254.0" yPosition="36.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
